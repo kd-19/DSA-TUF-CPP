@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Soltuion
+class Solution
 {
 public:
     void pattern5(int n) {
@@ -16,7 +16,7 @@ public:
 
 int main(){
     int N=5;
-    Soltuion sol;
+    Solution sol;
     sol.pattern5(N);
     return 0;
 }

@@ -16,13 +16,9 @@ bool isArmstrong(int N){
     double sum = 0;
     while(ref > 0){
         int lastDigit = ref % 10;
-        cout<<"lastDigit:"<<lastDigit<<endl;
-        cout<<"pow(lastDigit, count):"<<pow(lastDigit, count)<<endl;
         sum += pow(lastDigit, count);
-        cout<<"Sum after every step:"<<sum<<endl;
         ref = ref/10;
     }
-    cout<<sum<<endl;
 
     return sum == N;
 }

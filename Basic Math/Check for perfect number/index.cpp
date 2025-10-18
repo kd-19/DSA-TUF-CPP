@@ -13,7 +13,7 @@ int isPerfect(int N){
 }
 
 int main(){
-    int n = 28;
+    int n = 28; //6,  496,  8128
     cout<<isPerfect(n);
     return 0;
 }

@@ -12,8 +12,18 @@ bool isPrime(int N){
     return true;
 }
 
+int primeUptoN(int N){
+    int count = 0;
+    for(int i=1; i<=N; i++){
+        if(isPrime(i)){
+            count += 1;
+        }
+    }
+    return count;
+}
+
 int main(){
     int n = 7;
-    cout<<isPrime(n);
+    cout<<primeUptoN(n);
     return 0;
 }

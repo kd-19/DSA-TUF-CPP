@@ -1,23 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int reverseNumber(int N){
-    if(N == 0){
-        return 0;
-    };
+bool isPrime(int N){
+    if(N == 1) return false;
 
-    int rev = 0;
-    while(N > 0){
-        int lastDigit = N%10;
-        rev = rev*10 + lastDigit;
-        N = N/10;
+    for(int i=2; i<N; i++){
+        if(N%i == 0){
+            return false;
+        }
     }
+    return true;
+}
 
-    return rev;
+int primeUptoN(int N){
+    int count = 0;
+    for(int i=1; i<=N; i++){
+        if(isPrime(i)){
+            count += 1;
+        }
+    }
+    return count;
 }
 
 int main(){
-    int n = 276;
-    cout<<reverseNumber(n);
+    int n = 7;
+    cout<<primeUptoN(n);
     return 0;
 }
